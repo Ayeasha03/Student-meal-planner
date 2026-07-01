@@ -1,66 +1,50 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link'
+import Image from 'next/image'
+import classes from './page.module.css'
+import MainHeader from '@/components/main-header'
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <>
+    <MainHeader />
+    <main className={classes}>
+      <section className={classes.hero}>
+      <div className={classes.heroContent}>
+        
+          <p className={classes.tagline}>Good Food. Good Mood. Good Grades.</p>
+        
+      <h1 className= {classes.heroTitle}>
+        Eat Well on a <br/><span>Student Budget</span>
+        </h1>
+        <p className={classes.heroDescription}>Discover affordable, delicious and easy meals made for students</p>
+          <Link href="/meals" className={classes.heroButton}>Browse Meals → </Link>
+          </div>
+          <div className={classes.heroImage}>
+            <Image src="/images/hero-rice.png" alt='Delicious student meal' width={550} height={550} loading='eager'/>
+          </div>
+          </section>
+          <section className={classes.features}>
+            <h3 className={classes.featureHeading} >Why use Student Meal Planner ?</h3>
+            <div className={classes.featureGrid}>
+              <div className={classes.featureCard}>
+                <Image src='/images/wallet.png'  alt='wallet' width={24} height={24}className={classes.featureImage}/>
+                <div className={classes.feature}></div>
+                <h4 className={classes.featureTitle}>Affordable</h4>
+                <p className={classes.featureDescription}>Meals that won't break your budget</p>                
+              </div>
+              <div className={classes.featureCard}>
+                <Image src='/images/clock.png' alt='clock' width={24} height={24} className={classes.featureImage}/>
+                <h4 className={classes.featureTitle}>Quick & Easy</h4>
+                <p className={classes.featureDescription}>Simple meals you can prepare anywhere</p>
+              </div>
+              <div className={classes.featureCard}>
+                <Image src='/images/favorite.png' alt='favourite' width={24} height={24} className={classes.featureImage} />
+                <h4 className={classes.featureTitle}>Student Friendly</h4>
+                <p className={classes.featureDescription}>Perfect for busy student life</p>
+              </div>
+            </div>
+          </section>
+        </main>
+        </>
+  )
 }

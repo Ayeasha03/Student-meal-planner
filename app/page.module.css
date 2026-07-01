@@ -1,142 +1,94 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60 80px;
+    gap: 200px;
+    height: 80vh;
+}
+.heroContent {
+    flex: 1;
+    max-width: 35%;
+}
+.tagline {
+    background-color: var(--light-green);
+    border-radius: 20px;
+    padding: 6px 16px ;
+    display: inline-block;
+    color: var(--primary-green);
+}
+.heroTitle {
+font-size: 36px;
+font-weight: bolder;
+margin: 4px 0;
 
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+}
+.heroTitle span {
+    color: var(--primary-green);
 }
 
-.main {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+.heroDescription {
+    font-size: 16px;
+    margin-bottom: 40px;
 }
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+.heroButton {
+    background-color: var(--dark-green);
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    gap: 10px;
 }
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.heroButton img {
+    margin-top: 2px;
 }
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.heroButton:hover {
+    color: var(--dark-green);
+    background-color: var(--light-green);
 }
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+.heroImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-green);
+    padding: 10px 5px;
+    border-radius: 30px;
+    
 }
+.features {
+    padding: 40px 80px;
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
 }
-
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+.featureHeading {
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 40px;
 }
+.featureGrid{
+display: flex;
+justify-content: center;
+gap: 30px;
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
 }
-
-a.secondary {
-  border-color: var(--button-secondary-border);
+.featureCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    line-height: 8px;
 }
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.featureImage {
+margin-bottom: 5px;
+background-color: var(--light-green);
+border-radius: 100%;
+padding: 16px;
 }
-
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+.featureTitle{
+margin-bottom: 2px;
 }
+.featureDescription {
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
 }
